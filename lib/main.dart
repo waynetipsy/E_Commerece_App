@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/shop_page.dart';
 import 'package:e_commerce_app/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 import './themes/light_mode.dart';
@@ -14,9 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: IntroPage(),
-      theme: LightMode,
-    );
+        debugShowCheckedModeBanner: false,
+        home: const IntroPage(),
+        theme: LightMode,
+        routes: {
+          '/intro_page': (context) => const IntroPage(),
+          '/shop_page': (context) => const ShopPage()
+        });
   }
 }
